@@ -49,4 +49,4 @@ curl -s https://example.com/urls.txt | ../cyclourl -i - -v -c 4
 ```
 
 ## License
-MIT License - see (LICENSE)[https://github.com/Mr-MSA/CycloURL/blob/main/LICENSE] file for details
+MIT License - see [LICENSE](https://github.com/Mr-MSA/CycloURL/blob/main/LICENSE) file for details
