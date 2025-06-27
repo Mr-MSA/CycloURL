@@ -16,24 +16,24 @@ go build . -o cyclourl
 ### Basic
 ```
 # Sort URLs from file
-../cyclourl -i urls.txt -o sorted.txt
+./cyclourl -i urls.txt -o sorted.txt
 
 # Read from stdin, output to stdout
 cat urls.txt | ../cyclourl
 
 # Show statistics
-../cyclourl -i urls.txt -s
+./cyclourl -i urls.txt -s
 ```
 ### Optimized
 ```
 # High-performance processing with concurrency
-../cyclourl -i large_file.txt -c 8 --buffer 131072
+./cyclourl -i large_file.txt -c 8 --buffer 131072
 
 # Pipeline processing with validation  
 curl -s https://example.com/urls.txt | ../cyclourl -i - -v -c 4
 
 # Memory-efficient processing of huge files
-../cyclourl -i million_urls.txt -o distributed.txt -c 8 -s
+./cyclourl -i million_urls.txt -o distributed.txt -c 8 -s
 ```
 ### Flags
 + Help output: `$ ../cyclourl --help`
