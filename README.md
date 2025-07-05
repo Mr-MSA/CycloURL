@@ -19,7 +19,7 @@ go build . -o cyclourl
 ./cyclourl -i urls.txt -o sorted.txt
 
 # Read from stdin, output to stdout
-cat urls.txt | ../cyclourl
+cat urls.txt | ./cyclourl
 
 # Show statistics
 ./cyclourl -i urls.txt -s
@@ -30,13 +30,13 @@ cat urls.txt | ../cyclourl
 ./cyclourl -i large_file.txt -c 8 --buffer 131072
 
 # Pipeline processing with validation  
-curl -s https://example.com/urls.txt | ../cyclourl -i - -v -c 4
+curl -s https://example.com/urls.txt | ./cyclourl -i - -v -c 4
 
 # Memory-efficient processing of huge files
 ./cyclourl -i million_urls.txt -o distributed.txt -c 8 -s
 ```
 ### Flags
-+ Help output: `$ ../cyclourl --help`
++ Help output: `$ ./cyclourl --help`
 ```
       --buffer int       I/O buffer size in bytes (default 65536)
   -c, --concurrent int   Max concurrent processing (1-16) (default 1)
